@@ -54,7 +54,9 @@ def receive():
         rssi = rfm9x.last_rssi
         #print("<--",node_from,"("+str(rssi)+")",payload)
         print("<--",node_from,"["+str(rssi)+"]",payload)
-    return(packet)
+        return(packet)
+    else:
+        return(None)
 
 print("Waiting for packets...")
 time_now = time.monotonic()
